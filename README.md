@@ -7,7 +7,7 @@ A deep learning system for detecting anomalies in engine sounds using convolutio
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.31.0-FF4B4B)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-## 🎯 Project Overview
+## Project Overview
 
 This system uses a **Convolutional Autoencoder** architecture to learn the patterns of normal engine operation. By training only on healthy engine sounds, the model learns to reconstruct normal audio accurately. When presented with anomalous sounds (bearing failures, irregular vibrations, knocking), the reconstruction error increases significantly, enabling reliable anomaly detection.
 
@@ -21,7 +21,7 @@ This system uses a **Convolutional Autoencoder** architecture to learn the patte
 - **Synthetic Data Generation**: Create realistic engine sounds for testing
 - **Production Ready**: Complete MLOps pipeline from data to deployment
 
-## 🏗️ Architecture
+## Architecture
 
 ### Model Architecture
 
@@ -48,7 +48,7 @@ Decoder:
 5. **Model Inference**: Pass through autoencoder
 6. **Anomaly Detection**: Compare reconstruction error to threshold
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -77,7 +77,7 @@ streamlit run app.py
 
 The application will open in your browser at `http://localhost:8501`
 
-## 📖 Usage Guide
+## Usage Guide
 
 ### 1. Demo Mode (Synthetic Data)
 
@@ -141,7 +141,7 @@ The synthetic engine sound generator simulates:
 - **Total Parameters**: ~2.3M
 - **Training Time**: ~2-5 minutes on CPU for 50 samples
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 | Metric | Value |
 |--------|-------|
@@ -152,7 +152,7 @@ The synthetic engine sound generator simulates:
 | Reconstruction Error (Anomaly) | 0.010-0.050 |
 | Detection Accuracy | ~95% (synthetic data) |
 
-## 🎨 Customization
+## Customization
 
 ### Adjust Audio Parameters
 
@@ -189,7 +189,7 @@ detector = AnomalyDetector(model, threshold_percentile=90)  # More sensitive
 detector = AnomalyDetector(model, threshold_percentile=99)  # Less sensitive
 ```
 
-## 🚢 Deployment
+## Deployment
 
 ### Deploy to Streamlit Cloud
 
@@ -223,7 +223,7 @@ docker build -t engine-anomaly-detection .
 docker run -p 8501:8501 engine-anomaly-detection
 ```
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -240,7 +240,7 @@ docker run -p 8501:8501 engine-anomaly-detection
 - **Solution**: Increase training dataset size
 - **Solution**: Adjust threshold percentile
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -250,7 +250,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📚 References
+## References
 
 ### Audio Processing
 - [Librosa Documentation](https://librosa.org/doc/latest/index.html)
@@ -264,11 +264,11 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - [Vehicle NVH Fundamentals](https://www.sae.org/publications/books/content/r-418/)
 - [Sound Quality in Automotive Engineering](https://link.springer.com/book/10.1007/978-3-319-24055-8)
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - PyTorch team for the excellent deep learning framework
 - Librosa contributors for audio processing tools
